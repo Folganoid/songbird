@@ -1,0 +1,49 @@
+$main-color: rgb(86, 243, 94);
+$grey-color: rgb(167, 167, 167);
+$blue-color: #04f0f9;
+
+@function light($color: grey, $size: 5px) {
+
+    $main: #26ff00;
+    $grey: $grey-color;
+    $blue: $blue-color;
+
+    $result: 
+    0 0 $size #fff,
+    0 0 $size*2 #fff,
+    0 0 $size*3 $grey,
+    0 0 $size*4 $grey,
+    0 0 $size*5 $grey,
+    0 0 $size*6 $grey,
+    0 0 $size*7 $grey,
+    ;
+
+    @if $color == main {
+
+        $result: 
+        0 0 $size #fff,
+        0 0 $size*2 #fff,
+        0 0 $size*3 $main,
+        0 0 $size*4 $main,
+        0 0 $size*5 $main,
+        0 0 $size*6 $main,
+        0 0 $size*7 $main,
+        ;
+    }
+
+    @if $color == blue {
+
+        $result: 
+        0 0 $size #fff,
+        0 0 $size*2 #fff,
+        0 0 $size*3 $blue,
+        0 0 $size*4 $blue,
+        0 0 $size*5 $blue,
+        0 0 $size*6 $blue,
+        0 0 $size*7 $blue,
+        ;
+    }
+
+    @return $result;
+
+}

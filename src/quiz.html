@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./media/icon/bird.ico">
+    <title>Songbird quiz</title>
+  </head>
+  <body id="root">
+
+    <header class="header">
+
+      <div id="block-back" class="header__block-back"></div>
+      <nav class="header__nav">
+
+        <section class="header__nav-section header__nav-nav small-hide medium-hide">
+          <a href="./index.html"><img class="header__logo" src="./media/logo4.png" alt="logo"></a>
+          <ul class="header__nav-list">
+             <li><a href="./index.html" class="lang-home">Home</a></li>
+             <li class="header_neon"><a href="#" class="lang-quiz">Quiz</a></li>
+             <li><a href="./results.html" class="lang-results">Results</a></li>
+             <li><a href="./gallery.html" class="lang-gallery">Gallery</a></li>
+          </ul>
+        </section>
+
+        <section class="">
+          <h3 class="header__score"><span class="lang-score">Score:</span> <span id="header__score_val">0</span></h3>
+        </section>
+
+        <section class="header__nav-section">
+        <div class="header__checkbox switch">
+          <label>
+            <span class="header__switch-label lang--en"> ENG </span>
+            <input type="checkbox" class="header__switch-control">
+            <span class="header__switch-label lang--ua"> UKR </span>
+          </label>
+        </div>
+        </section>
+
+        <section class="header__burger header__nav-section large-hide">
+          <div><img id="burger-ico" class="header__burger-ico" src="./media/icon/burger.svg" alt="burger"></div>
+          <div id="burger-list" class="header__burger-list">
+            <ul class="header__burger-list-ul">
+              <li><a href="./index.html"><img class="header__logo" src="./media/logo4.png" alt="logo"></a></li>
+              <li>&nbsp;</li>
+              <li><a href="./index.html" class="lang-home">Home</a></li>
+              <li class="header_neon"><a href="#" class="lang-quiz">Quiz</a></li>
+              <li><a href="./results.html" class="lang-results">Results</a></li>
+              <li><a href="./gallery.html" class="lang-gallery">Gallery</a></li>
+            </ul>
+          </div>
+        </section>
+
+      </nav>
+
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <section class="main__panel main__levels">
+          <div class="main__levels-body">
+          <div class="main__level" data-val="0">
+            <div class="">
+              <p class="main__level_active lang-level-0">Warming up</p>
+            </div>
+          </div>
+          <div class="main__level" data-val="1">
+            <div class="">
+              <p class="lang-level-1">Passerines</p>
+            </div>
+          </div>
+          <div class="main__level" data-val="2">
+            <div class="">
+              <p class="lang-level-2">Forest birds</p>
+            </div>
+          </div>
+          </div>
+          <div class="main__levels-body">
+          <div class="main__level" data-val="3">
+            <div class="">
+              <p class="lang-level-3">Songbirds</p>
+            </div>
+          </div>
+          <div class="main__level" data-val="4">
+            <div class="">
+              <p class="lang-level-4">Predators</p>
+            </div>
+          </div>
+          <div class="main__level" data-val="5">
+            <div class="">
+              <p class="lang-level-5">Sea birds</p>
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <section id="main__panel-ask" class="main__panel-bird main__panel">
+
+          <div id="main__ask-img">
+            <img class="main__ask-img" src="#" alt="bird">
+          </div>
+          <div class="main__ask-ctx">
+              <h4 id="main__ask-title" class=""></h4>
+              <hr class=""/>
+              <p id="main__ask-spec"></p>
+
+              <div class="main__ask_audio audio-player">
+                <div class="play-container reload-block">
+                  <div class="toggle-play-body">
+                    <div class="toggle-play play"></div>
+                  </div>
+                  <img class="spin" src="./media/loading-gif.gif" alt="spinner">
+                  <div class="timeline-body">
+                    <div class="timeline">
+                      <div class="progress"></div>
+                      <div class="progress-dot"></div>
+                    </div>
+                    <div class="time">
+                      <div class="current">0:00</div>
+                      <div class="length"></div>
+                    </div>
+                  </div>
+                  <div class="volume-container">
+                    <img class="volume-img" src="./media/icon/volume.png" alt="volume">
+                    <div class="volume-slider">
+                      <div class="volume-percentage"></div>
+                      <div class="volume-dot"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </section>
+
+        <section id="main__panel-answer">
+          <div id="main__answers-container">
+            <div>
+              <button data-val="0" class="main__answer-btn btn">
+                <div class="main__answer-dot"></div>
+                <span class="main__answer-txt"></span>
+              </button>
+            </div>
+            <div>
+              <button data-val="1" class="main__answer-btn btn">
+                <div class="main__answer-dot"></div>
+                <span class="main__answer-txt"></span>
+              </button>
+            </div>
+            <div>
+              <button data-val="2" class="main__answer-btn btn">
+                <div class="main__answer-dot"></div>
+                <span class="main__answer-txt"></span>
+              </button>
+            </div>
+            <div>
+              <button data-val="3" class="main__answer-btn btn">
+                <div class="main__answer-dot"></div>
+                <span class="main__answer-txt"></span>
+              </button>
+            </div>
+            <div>
+              <button data-val="4" class="main__answer-btn btn">
+                <div class="main__answer-dot"></div>
+                <span class="main__answer-txt"></span>
+              </button>
+            </div>
+            <div>
+              <button data-val="5" class="main__answer-btn btn">
+                <div class="main__answer-dot"></div>
+                <span class="main__answer-txt"></span>
+              </button>
+            </div>
+          </div>
+          <div id="main__answer-bird">
+            <div id="main__answer-bird-box" class="main__panel"></div>
+          </div>
+        </section>
+        <button id="main__next-level" class="main__panel btn" disabled><span class="main__next-1 lang-next-1">Next level</span><span class="main__next-2 lang-next-2">Next level</span></button>
+      </div>
+      <div id="main__count" class="main__count">-1</div>
+      <div class="main__branch-1"></div>
+      <div class="main__branch-2"></div>
+      <div style="width: 50px; height: 50px;"></div>
+
+
+    </main>
+
+    <footer class="footer">
+      <nav class="footer__nav">
+        <section class="footer__container">
+          <div>
+            <a href="https://rs.school/js/"><img class="footer__logo" src="./media/rs_school_js.svg" alt="logo"></a>
+          </div>
+          <div class="">
+            <a class="footer__designed-by small-hide lang-author-long" href="https://github.com/Folganoid">© 2022 Copyright - Andrii Holubkov</a>
+            <a class="footer__designed-by large-hide medium-hide lang-author-short" href="https://github.com/Folganoid">© 2022 A. Holubkov</a>
+          </div>
+        </section>
+      </nav>
+    </footer>
+
+  </body>
+</html>

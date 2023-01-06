@@ -1,0 +1,215 @@
+@import './vars.scss';
+
+.audio-player {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 0.75em;
+  overflow: hidden;
+  border-radius: 10px;
+  
+    .play-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(0,0,0,0.7);
+  
+      & .spin {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .toggle-play-body {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 8px;
+        flex: 0 0 34px;
+        transition: all, 300ms;
+        opacity: 0;
+
+        &:hover {
+          box-shadow: 
+          0 0 5px #fff,
+          0 0 10px $grey-color,
+        }
+        &.light {
+          background-color: #fff;
+          box-shadow: light(grey, 5px);
+        }
+  
+        .toggle-play {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-color: #444;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all, 300ms;
+    
+          &.play {
+            cursor: pointer;
+            font-size: 2rem;
+            &::after{
+              content:  "⏵";
+              padding: 7px 0 0 3px;
+            }
+            &:hover {
+              color: #fff;
+              text-shadow: 
+              0 0 5px #fff,
+              0 0 10px $grey-color,
+            }
+          }
+          &.pause {
+            cursor: pointer;
+            font-size: 1.8rem;
+            &::after{
+              content:  "⏸";
+              padding: 6px 0 0 0;
+            }
+            &:hover {
+              color: #fff;
+              text-shadow: 
+              0 0 5px #fff,
+              0 0 10px $grey-color,
+            }
+          }
+          &.light {
+            cursor: pointer;
+            font-size: 1.8rem;
+            &::after{
+              content:  "⏸";
+              color: #fff;
+              text-shadow: light(grey, 2px);
+              filter: blur(5px);
+            }
+            &:hover {
+              color:$grey-color;
+            }
+          }
+
+        }
+      }
+  
+      .timeline-body {
+        width: 100%;
+        margin: 0% 1%;
+   
+        .timeline {
+          margin: 25px 0px 5px 0px;
+          align-self: start;
+          background: #fff;
+          height: 5px;
+          position: relative;
+          cursor: pointer;
+          .progress {
+            background: $grey-color;
+            width: 0%;
+            height: 100%;
+            transition: 0.25s;
+          }
+          .progress-dot {
+            position: absolute;
+            top: -6px;
+            left: 0%;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: 0.25s;
+          }
+        }
+  
+        .time {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.8rem;
+          font-weight: 900;
+          margin-bottom: 5px;
+        }
+      }
+  
+      .volume-container {
+        margin: 0px 20px 0px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 160px;
+  
+        .volume-button {
+          height: 26px;
+          display: flex;
+          align-items: center;
+          .volume {
+            transform: scale(0.7);
+          }
+        }
+  
+        .volume-img{
+          height: 20px;
+          filter: invert(100%);
+          display: block;
+        }
+      
+        position: relative;
+        z-index: 2;
+
+        .volume-slider {
+          cursor: pointer;
+          width: 75%;
+          height: 5px;
+          background: #fff;
+          transition: .25s;
+          position: relative;
+          .volume-percentage {
+            background: $grey-color;
+            height: 100%;
+            width: 75%;
+            transition: 0.25s;
+          }
+          .volume-dot {
+            position: absolute;
+            top: -6px;
+            left: 75%;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: 0.25s;
+          }
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 639px) {
+  
+  .audio-player {
+    .play-container {
+      .volume-container {
+        .volume-slider {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+}
+
+
+  

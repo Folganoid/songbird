@@ -1,0 +1,330 @@
+@import './vars-blue.scss';
+@import './common.scss';
+@import './header.scss';
+@import './footer.scss';
+
+
+html {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../media/back11.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+}
+
+//blue theme
+.header__logo {
+  filter: invert(50%) sepia(53%) saturate(6599%) hue-rotate(194deg) brightness(130%) contrast(101%);
+}
+#burger-ico:hover {
+  filter: invert(50%) sepia(53%) saturate(6599%) hue-rotate(194deg) brightness(130%) contrast(101%);
+}
+.footer__logo:hover {
+  filter: invert(50%) sepia(53%) saturate(6599%) hue-rotate(194deg) brightness(130%) contrast(101%) !important;
+}
+
+.main {
+  position: relative;
+  z-index: 900;
+  overflow-x: hidden;
+
+  &__branch-1 {
+    position: fixed;    
+    height: 320px;
+    min-width: 540px;
+    right: 0px;
+    top: 0px;
+    overflow: hidden;
+    background-image: url(../media/bird2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    opacity: 1;
+    z-index: 200;
+  }
+
+  &__branch-2 {
+    position: fixed;    
+    height: 551px;
+    min-width: 790px;
+    left: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    background-image: url(../media/bird3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    opacity: 1;
+    z-index: 200;
+  }
+
+  &__container {
+   
+    position: relative;
+    z-index: 300;
+    opacity: 0;
+    transition: all 300ms;
+    margin: 100px 15px;
+
+    .main__results-body {
+      background-color: rgba(256,256,256,0.8);
+      border-radius: 5px;
+      width: 80%;
+      margin: 1.5% auto;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .main__desc-head {
+        color: #f5f5f5;
+        font-size: 3rem;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+        margin: 10px 0 0 0;
+      }
+
+      .maint__table {
+
+        width: 90%;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: #000;
+
+        .col1 {
+          text-align: center;
+          width: 15%;
+        }
+        .col2 {
+          text-align: center;
+          width: 15%;
+        }
+        .col3 {
+          text-align: left;
+          width: 20%;
+        }
+        .col4 {
+          text-align: center;
+          width: 50%;
+        }
+
+        #main__table-body{
+
+          transition: all 300ms;
+    
+          .td_light {
+            color: $main-color;
+            font-weight: 900;
+            transition: all 300ms;
+          }
+    
+          .td_light-shadow {
+            color: #fff;
+            text-shadow: light(grey, 5px);
+            filter: blur(2px);
+          }
+    
+          td {
+            padding: 5px !important;
+          }
+    
+        }
+
+      }
+
+    }
+
+    .main__results-name-block {
+      background-color: rgba(256,256,256,0.8);
+      border-radius: 5px;
+      width: 80%;
+      margin: auto;
+      padding: 10px 0;
+      display: none;
+      transition: opacity 300ms;
+      margin: 1.5% auto;
+      flex-direction: column;
+      align-items: center;
+
+      #main__congrat {
+        font-size: 2.5rem;
+        margin: 0px;
+      }
+      #main__score-title {
+        font-size: 1.4rem;
+        margin: 10px 0;
+        #main__score {
+          color: $main-color;
+          font-weight: 900;
+        }
+      }
+
+      .main__form {
+        display: flex;
+
+        .main__input {
+          border-radius: 5px;
+          border: 1px;
+          font-size: 1rem;
+          padding-left: 10px;
+          transition: all 300ms;
+
+          &::placeholder {
+            color: $grey-color;
+            font-size: 1rem;
+          }
+        }
+        #main__input-btn {
+          margin-left: 5px;
+          transition: all 300ms;
+          &:hover {
+            color: #fff;
+            text-shadow: light(grey, 2px);
+          }
+        }
+      }
+    }
+
+    .main__results-repeat-block {
+      background-color: rgba(256,256,256,0.8);
+      border-radius: 5px;
+      width: 80%;
+      margin: 1.5% auto;
+      padding: 10px 0;
+      display: none;
+      align-items: center;
+      flex-direction: column;
+      transition: opacity 300ms;
+
+      .main__repeat-title {
+        font-size: 2rem;
+        margin: 0%;
+      }
+      .main__repeat-form {
+        display: flex;
+        justify-content: center;
+
+        .btn {
+          transition: all 300ms;
+          margin: 0 2.5px;
+          &:hover {
+            color: #fff;
+            text-shadow: light(grey, 2px);
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 960px) {
+
+  .main {
+ 
+    &__branch-1 {
+      min-width: 340px;
+    }
+  
+    &__branch-2 {
+      min-width: 500px;
+    }
+
+    &__container {
+      .main__results-body {
+
+       .main__desc-head {
+         font-size: 2rem;
+       }
+ 
+       .maint__table {
+         font-size: 1.2rem;
+       }
+
+     }
+    }
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+  .main {
+ 
+    &__branch-1 {
+      min-width: 340px;
+    }
+  
+    &__branch-2 {
+      min-width: 400px;
+    }
+
+    &__container {
+
+      margin: 50px 10px;
+
+      .main__results-body {
+         width: 100%;
+        .main__desc-head {
+          font-size: 2rem;
+        }
+  
+        .maint__table {
+  
+          width: 90%;
+          font-size: 1rem;
+  
+          .col1 {
+            text-align: center;
+            width: 30%;
+          }
+          .col2 {
+            text-align: center;
+            width: 30%;
+          }
+          .col3 {
+            text-align: left;
+            width: 60%;
+          }
+          .col4 {
+            width: 0%;
+            display: none;
+          }
+  
+        }
+  
+      }
+    }
+
+    .main__results-name-block {
+      width: 100%;
+
+      #main__congrat {
+        font-size: 1.6rem;
+      }
+      #main__score-title {
+        font-size: 1.2rem;
+      }
+
+      .main__form {
+        .main__input {
+          font-size: 1rem;
+
+          &::placeholder {
+            color: $grey-color;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .main__results-repeat-block {
+      width: 100%;
+      .main__repeat-title {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+}
